@@ -1,0 +1,20 @@
+@use '../partials/breakpoints' as *;
+
+@mixin tablet{
+    @media (min-width: $breakpoint-tablet){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: $breakpoint-desktop){
+        @content;
+    }
+}
+
+@mixin flex-row-center{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
