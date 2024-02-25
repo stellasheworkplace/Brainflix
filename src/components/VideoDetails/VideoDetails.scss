@@ -1,0 +1,146 @@
+@use "../../partials/mixins" as *;
+@use '../../partials/color' as *;
+@use '../../partials/typography';
+
+.video {
+    font-family: "Avenir", sans-serif;
+    color: $primary-black;
+    &__title {
+        padding: 24px 16px 16px 16px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        margin: 0;
+
+        @include tablet{
+            font-family: "Avenir Bold", sans-serif;
+            font-size:33px;
+            line-height: 44px;
+        }
+    }
+
+    &__info {
+        @include flex-row-center;
+        justify-content: space-between;
+        //flex-wrap: wrap;
+        padding: 16px 16px;
+        border:  1px solid $secondary-mercury;
+        //border-bottom-color: $secondary-mercury;
+
+        @include tablet{
+            padding: 0;
+            border-top: none;
+            height:30px;
+        }
+
+
+        &--subtitle {
+            color: $primary-silver;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 18px;
+            
+        }
+
+        &--date{
+            @include tablet{
+                padding: 0 24px;
+            }
+
+        }
+        &--channel {
+            @extend .video__info--subtitle;
+            color: $primary-black;
+            font-weight: 400;
+
+            @include tablet{
+                font-weight: 700;
+                line-height: 22px;
+                font-size: 14px;
+            }
+
+
+        }
+
+        &--right {
+            @include flex-row-center;
+            flex-direction: column;
+
+            @include tablet{
+                flex-direction: row;
+                padding: 16px 16px;
+            }
+
+        }
+
+        &--left {
+            @include flex-row-center;
+            flex-direction: column;
+
+            @include tablet{
+                flex-direction: row;
+                align-items: end;
+            }
+
+        }
+
+        &--num{
+            position: relative;
+            left: -45px;
+            top: 3px;
+
+            @include tablet{
+               left: -40px;
+            }
+
+        }
+
+        &--nums{
+            @extend .video__info--num;
+            top: 10px;
+
+            @include tablet{
+                left: -13px;
+                top:4px;
+            }
+
+        }
+    }
+
+    &__likes{
+        position: relative;
+        left: -55px;
+        top:15px;
+
+        @include tablet{
+           top:8px;
+           left: -18px;
+        }
+
+    }
+
+    &__views{
+        @extend .video__likes;
+        top:5px;
+
+        @include tablet{
+            left: -50px;
+        }
+
+    }
+
+    &__description{
+        padding: 16px 16px 24px 16px;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+
+        @include tablet{
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+    }
+
+
+}
