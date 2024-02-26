@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import VideoPlayListItem from './components/VideoPlayListItem/VideoPlayListItem';
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import VideoList from './components/VideoList/VideoList';
+import Comment from './components/Comment/Comment';
 
 import videoList from './data/video-details.json';
 
@@ -31,7 +32,7 @@ function App() {
         </div>
 
         <div>
-            <Comment />
+            <Comment videoList={videoList} videoSelected={videoSelected} updateActiveVideo={updateActiveVideo} />
         </div>
     </div>
 
