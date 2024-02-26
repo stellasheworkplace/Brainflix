@@ -18,7 +18,7 @@ function Comment(props) {
     // } = comment;
 
     // let i = 1;
-    
+
     // for( let i = 0; i< 3; i++){
     //     i += 1;
     // }
@@ -35,12 +35,11 @@ function Comment(props) {
                     <div className='comment__upload--left'>
                         <h2>JOIN THE CONVERSATION</h2>
                         <form className='comment__form'>
-                            <div>
-                                <label for="comment__info">INFO</label>
+                            <div className='comment__form--box'>
                                 <input className='comment__input' type="text" placeholder='Add a new comment' name="comment" />
                             </div>
 
-                            <div>
+                            <div className='comment__form--button'>
                                 <button type='submit'>COMMENT</button>
                                 <img src={icon} alt="comment icon" className='comment__logo' />
                             </div>
@@ -49,45 +48,61 @@ function Comment(props) {
                 </div>
 
                 <ul className='comment__list'>
-                    <li>
-                        <img src={grey} alt="empty avatar" />
-                        <div>
-                            <span>{props.videoSelected.comments[0].name}</span>
-                            <span>{new Date(props.videoSelected.comments[0].timestamp).toLocaleDateString('en-US')}</span>
+                    <li className='comment__list--container'>
+                        {/* <div className='comment__list--box'> */}
+                        <div className='comment__list--left'>
+                            <img className='comment__list--image' src={grey} alt="empty avatar" />
                         </div>
 
-                        <p>
-                            {props.videoSelected.comments[0].comment}
-                        </p>
+                        <div className='comment__list--right'>
+                            <div className='comment__list--namedate'>
+                                <span className='comment__list--name'>{props.videoSelected.comments[0].name}</span>
+                                <span className='comment__list--date'>{new Date(props.videoSelected.comments[0].timestamp).toLocaleDateString('en-US')}</span>
+                            </div>
+                            {/* </div> */}
+                            <p>
+                                {props.videoSelected.comments[0].comment}
+                            </p>
+                        </div>
                     </li>
 
-                    <li>
-                        <img src={grey} alt="empty avatar" />
-                        <div>
-                            <span>{props.videoSelected.comments[1].name}</span>
-                            <span>{new Date(props.videoSelected.comments[1].timestamp).toLocaleDateString('en-US')}</span>
+                    <li className='comment__list--container'>
+                        {/* <div className='comment__list--box'> */}
+                        <div className='comment__list--left'>
+                            <img className='comment__list--image' src={grey} alt="empty avatar" />
                         </div>
 
-                        <p>
-                            {props.videoSelected.comments[1].comment}
-                        </p>
+                        <div className='comment__list--right'>
+                            <div className='comment__list--namedate'>
+                                <span className='comment__list--name'>{props.videoSelected.comments[1].name}</span>
+                                <span className='comment__list--date'>{new Date(props.videoSelected.comments[1].timestamp).toLocaleDateString('en-US')}</span>
+                            </div>
+                            {/* </div> */}
+                            <p>
+                                {props.videoSelected.comments[1].comment}
+                            </p>
+                        </div>
                     </li>
 
-                    <li>
-                        <img src={grey} alt="empty avatar" />
-                        <div>
-                            <span>{props.videoSelected.comments[2].name}</span>
-                            <span>{new Date(props.videoSelected.comments[2].timestamp).toLocaleDateString('en-US')}</span>
+                    <li className='comment__list--container'>
+                        {/* <div className='comment__list--box'> */}
+                        <div className='comment__list--left'>
+                            <img className='comment__list--image' src={grey} alt="empty avatar" />
                         </div>
 
-                        <p>
-                            {props.videoSelected.comments[2].comment}
-                        </p>
+                        <div className='comment__list--right'>
+                            <div className='comment__list--namedate'>
+                                <span className='comment__list--name'>{props.videoSelected.comments[2].name}</span>
+                                <span className='comment__list--date'>{new Date(props.videoSelected.comments[2].timestamp).toLocaleDateString('en-US')}</span>
+                            </div>
+                            {/* </div> */}
+                            <p>
+                                {props.videoSelected.comments[2].comment}
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </main>
-
-
         </>
     );
 }

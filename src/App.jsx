@@ -23,7 +23,7 @@ function App() {
     }
 
   return(
-    <main>
+    <main className='app'>
     <Header />
     <VideoPlayListItem videoSelected = {videoSelected} />
     <div>
