@@ -29,6 +29,10 @@ function App() {
         <div>
             <VideoDetails videoDescription={videoSelected} />
         </div>
+
+        <div>
+            <Comment />
+        </div>
     </div>
 
     <div>

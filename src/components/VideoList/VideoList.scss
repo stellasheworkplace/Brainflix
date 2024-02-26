@@ -1,0 +1,50 @@
+@use "../../partials/mixins" as *;
+@use '../../partials/color' as *;
+@use '../../partials/typography';
+
+
+.video-list{
+    color: $primary-black;
+
+   &__title{
+    color:$primary-silver;
+    padding: 0 0 0 16px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+   }
+
+    &__nav{
+        list-style: none;
+        width: 80%;
+        padding: 0 5px 5px 16px;
+        margin: 0;
+        &--item{
+            @include flex-row-center;
+           height: 80px;
+       
+        }
+    }
+}
+
+.video-image{
+    width: 7rem;
+    height:4rem;
+    
+}
+
+.video-info{
+    &__title{
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 700;
+        width: 11rem;
+        padding-left: 1rem;
+    }
+
+    &__channel{
+        @extend .video-info__title;
+        color: $primary-silver;
+        font-weight: 400;
+    }
+}

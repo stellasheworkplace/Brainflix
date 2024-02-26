@@ -1,5 +1,5 @@
 //import VideoListItem from '../VideoListItem/VideoListItem';
-
+import './VideoList.scss';
 function VideoList(props) {
 
     let className = "video-list-item";
@@ -15,24 +15,27 @@ function VideoList(props) {
 
     return (
     <>
-       <h3>NEXT VIDEOS</h3>
-        <ul className="videos-list">
+    <main className="video-list">
+       <h3 className="video-list__title">NEXT VIDEOS</h3>
+        <ul className="video-list__nav">
             {props.videoList.filter((video) => video.id !== props.videoSelected.id).map((video) => {
                 return (
-                   <li onClick={() => { props.updateActiveVideo(video.id);}} key={video.id} className={className}>
+                   <li onClick={() => { props.updateActiveVideo(video.id);}} key={video.id} className="video-list__nav--item">
                     <div>
-                        <img src={video.image} alt="" />
+                        <img className="video-image" src={video.image} alt="image" />
                     </div>
 
-                    <div>
-                        <h3>{video.title}</h3>
-                        <p>{video.channel}</p>
+                    <div className='video-info'>
+                        <p className='video-info__title'>{video.title}</p>
+                        <p className='video-info__channel'>{video.channel}</p>
                     </div>
 
                    </li>
                 )
             })}
         </ul>
+
+        </main>
         </>
     );
 }
