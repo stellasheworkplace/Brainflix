@@ -1,8 +1,30 @@
 @use "./partials/global";
+@use "./partials/mixins" as *;
+@use "./partials/color" as *;
 
-// .app{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     position: static;
-// }
+.app {
+
+    &__bottom {
+        @include desktop {
+            display: flex;
+            align-items: center;
+           
+        }
+    }
+
+    &__box{
+        @include desktop{
+
+            @include flex-row-center;
+            flex-direction: column;
+            
+        }
+    }
+
+    &__list{
+        @include desktop{
+            border-left: 1px solid $primary-silver;
+            margin-bottom: 10rem;
+        }
+    }
+}

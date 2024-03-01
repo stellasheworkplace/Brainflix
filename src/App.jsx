@@ -7,41 +7,48 @@ import Comment from './components/Comment/Comment';
 
 import videoList from './data/video-details.json';
 
-import {useState} from 'react';
+import { useState } from 'react';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
+import Home from './Page/Home/Home';
 
 function App() {
+    // const [videoSelected, getActivedVideo] = useState(videoList[0]);
+    // console.log(videoSelected);
 
-    //const[videoDetail, getVideoDetail] = useState(videoList);
-    const[videoSelected, getActivedVideo] = useState(videoList[0]);
-    console.log(videoSelected);
+    // function updateActiveVideo(clickedID) {
+    //     const newActiveVideo = videoList.find((video) => video.id === clickedID);
+    //     getActivedVideo(newActiveVideo);
+    // }
 
-    function updateActiveVideo(clickedID){
-        //const newActiveVideo = videoDetail.find((video) => video.id === clickedID);
-        const newActiveVideo = videoList.find((video) => video.id === clickedID);
-        getActivedVideo(newActiveVideo);
-    }
+    return (
+        // <main className='app'>
+        //     <Header />
+        //     <VideoPlayListItem videoSelected={videoSelected} />
 
-  return(
-    <main className='app'>
-    <Header />
-    <VideoPlayListItem videoSelected = {videoSelected} />
-    <div>
-        <div>
-            <VideoDetails videoDescription={videoSelected} />
-        </div>
+        //     <div className='app__bottom'>
+        //         <div className='app__box'>
+        //             <VideoDetails videoDescription={videoSelected} />
+        //             <Comment videoList={videoList} videoSelected={videoSelected} updateActiveVideo={updateActiveVideo} />
+        //         </div>
 
-        <div>
-            <Comment videoList={videoList} videoSelected={videoSelected} updateActiveVideo={updateActiveVideo} />
-        </div>
-    </div>
+        //         <div className='app__list'>
+        //             <VideoList videoList={videoList} videoSelected={videoSelected} updateActiveVideo={updateActiveVideo} />
+        //         </div>
+        //     </div>
 
-    <div>
-        <VideoList videoList={videoList} videoSelected={videoSelected} updateActiveVideo={updateActiveVideo} />
-    </div>
+        // </main>
 
-    </main>
-  );
+        <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/video-upload' element={<Home />} />
+
+
+            
+        </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

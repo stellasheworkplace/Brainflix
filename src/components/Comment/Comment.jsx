@@ -5,41 +5,23 @@ import icon from '../../assets/Icons/add_comment.svg';
 import grey from '../../assets/Images/icon-like.jpeg';
 
 function Comment(props) {
-
-    //let users = props.videoSelected.comments;
-
-    // for(let i=0; i< users.length; i++){
-    //     const user = users[i];
-    // }
-    // const {
-    //     name,
-    //     date,
-    //     comment
-    // } = comment;
-
-    // let i = 1;
-
-    // for( let i = 0; i< 3; i++){
-    //     i += 1;
-    // }
-
     return (
         <>
-            <main className='comment'>
+            <div className='comment'>
                 <h3 className="commennt__title">3 Comments</h3>
                 <div className='comment__upload'>
-                    <div className='comment__upload--right'>
+                    <div className='comment__right'>
                         <img className="comment__image" src={avatar} alt="avater image" />
                     </div>
 
-                    <div className='comment__upload--left'>
+                    <div className='comment__left'>
                         <h2>JOIN THE CONVERSATION</h2>
                         <form className='comment__form'>
-                            <div className='comment__form--box'>
+                            <div className='comment__box'>
                                 <input className='comment__input' type="text" placeholder='Add a new comment' name="comment" />
                             </div>
 
-                            <div className='comment__form--button'>
+                            <div className='comment__button'>
                                 <button type='submit'>COMMENT</button>
                                 <img src={icon} alt="comment icon" className='comment__logo' />
                             </div>
@@ -48,61 +30,58 @@ function Comment(props) {
                 </div>
 
                 <ul className='comment__list'>
-                    <li className='comment__list--container'>
-                        {/* <div className='comment__list--box'> */}
-                        <div className='comment__list--left'>
-                            <img className='comment__list--image' src={grey} alt="empty avatar" />
+                    <li className='comment__container'>
+                        <div className='comment__lefts'>
+                            <img className='comment__images' src={grey} alt="empty avatar" />
                         </div>
 
-                        <div className='comment__list--right'>
-                            <div className='comment__list--namedate'>
-                                <span className='comment__list--name'>{props.videoSelected.comments[0].name}</span>
-                                <span className='comment__list--date'>{new Date(props.videoSelected.comments[0].timestamp).toLocaleDateString('en-US')}</span>
+                        <div className='comment__rights'>
+                            <div className='comment__namedate'>
+                                <span className='comment__name'>{props.videoSelected.comments[0].name}</span>
+                                <span className='comment__date'>{new Date(props.videoSelected.comments[0].timestamp).toLocaleDateString('en-US')}</span>
                             </div>
-                            {/* </div> */}
                             <p>
                                 {props.videoSelected.comments[0].comment}
                             </p>
                         </div>
                     </li>
 
-                    <li className='comment__list--container'>
-                        {/* <div className='comment__list--box'> */}
-                        <div className='comment__list--left'>
-                            <img className='comment__list--image' src={grey} alt="empty avatar" />
+                    <li className='comment__container'>
+                        <div className='comment__lefts'>
+                            <img className='comment__images' src={grey} alt="empty avatar" />
                         </div>
 
-                        <div className='comment__list--right'>
-                            <div className='comment__list--namedate'>
-                                <span className='comment__list--name'>{props.videoSelected.comments[1].name}</span>
-                                <span className='comment__list--date'>{new Date(props.videoSelected.comments[1].timestamp).toLocaleDateString('en-US')}</span>
+                        <div className='comment__rights'>
+                            <div className='comment__namedate'>
+                                <span className='comment__name'>{props.videoSelected.comments[1].name}</span>
+                                <span className='comment__date'>{new Date(props.videoSelected.comments[1].timestamp).toLocaleDateString('en-US')}</span>
                             </div>
-                            {/* </div> */}
+
                             <p>
                                 {props.videoSelected.comments[1].comment}
                             </p>
                         </div>
                     </li>
 
-                    <li className='comment__list--container'>
-                        {/* <div className='comment__list--box'> */}
-                        <div className='comment__list--left'>
-                            <img className='comment__list--image' src={grey} alt="empty avatar" />
+                    <li className='comment__container'>
+
+                        <div className='comment__lefts'>
+                            <img className='comment__images' src={grey} alt="empty avatar" />
                         </div>
 
-                        <div className='comment__list--right'>
-                            <div className='comment__list--namedate'>
-                                <span className='comment__list--name'>{props.videoSelected.comments[2].name}</span>
-                                <span className='comment__list--date'>{new Date(props.videoSelected.comments[2].timestamp).toLocaleDateString('en-US')}</span>
+                        <div className='comment__rights'>
+                            <div className='comment__namedate'>
+                                <span className='comment__name'>{props.videoSelected.comments[2].name}</span>
+                                <span className='comment__date'>{new Date(props.videoSelected.comments[2].timestamp).toLocaleDateString('en-US')}</span>
                             </div>
-                            {/* </div> */}
+
                             <p>
                                 {props.videoSelected.comments[2].comment}
                             </p>
                         </div>
                     </li>
                 </ul>
-            </main>
+            </div>
         </>
     );
 }

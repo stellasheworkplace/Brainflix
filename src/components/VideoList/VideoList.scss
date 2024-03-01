@@ -22,6 +22,11 @@
         &--item{
             @include flex-row-center;
             height: 80px;
+
+            @include desktop{
+                margin-bottom: 1rem;
+
+            }
        
         }
     }

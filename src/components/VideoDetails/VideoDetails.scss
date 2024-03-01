@@ -22,14 +22,14 @@
     &__info {
         @include flex-row-center;
         justify-content: space-between;
-        //flex-wrap: wrap;
+       
         padding: 16px 16px;
-        border:  1px solid $secondary-mercury;
-        //border-bottom-color: $secondary-mercury;
+        border-bottom:  1px solid $secondary-mercury;
+       
 
         @include tablet{
             padding: 0;
-            border-top: none;
+            //border-top: none;
             height:30px;
         }
 
@@ -47,6 +47,10 @@
 
             @include tablet{
                 padding: 0 24px;
+            }
+
+            @include desktop{
+                padding-top: 16px;
             }
 
         }

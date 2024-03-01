@@ -3,11 +3,7 @@ import like from '../../assets/Icons/likes.svg';
 import '../VideoDetails/VideoDetails.scss';
 
 function VideoDetails({videoDescription}) {
-//    // const timestamp = props.videoSelected.timestamp;
-//     let date = new Date(props.videoSelected.timestamp);
-//     const newDate = date.toLocaleDateString("en-US");
 
-//     console.log(newDate);
 const{
     title,
     channel,
