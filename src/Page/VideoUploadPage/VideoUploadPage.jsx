@@ -1,7 +1,7 @@
 import Header from'../../components/Header/Header';
 import UploadVideo from '../../components/UploadVideo/UploadVideo';
 
-function VideoUpload(){
+function VideoUploadPage(){
 
     return(
         <>
@@ -11,4 +11,5 @@ function VideoUpload(){
     );
 }
 
-export default VideoUpload;
+
+export default VideoUploadPage;

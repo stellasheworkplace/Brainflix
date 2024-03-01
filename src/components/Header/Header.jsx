@@ -26,8 +26,8 @@ function Header() {
                 <img className='header__search-avatar' src={avatar} alt="avatar" />
             </form>
            
-            <button className='header__upload'>
-                <img className='header__upload-icon' onClick={handleClick} src={upload} alt="upload icon" />
+            <button className='header__upload' onClick={handleClick}>
+                <img className='header__upload-icon' src={upload} alt="upload icon" />
                 UPLOAD
             </button>
         </nav>

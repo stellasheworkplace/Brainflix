@@ -8,9 +8,10 @@ import Comment from './components/Comment/Comment';
 import videoList from './data/video-details.json';
 
 import { useState } from 'react';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './Page/Home/Home';
+import VideoUploadPage from './Page/VideoUploadPage/VideoUploadPage';
 
 function App() {
     // const [videoSelected, getActivedVideo] = useState(videoList[0]);
@@ -38,16 +39,14 @@ function App() {
         //     </div>
 
         // </main>
-
-        <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/video-upload' element={<Home />} />
-
-
-            
-        </Routes>
-        </BrowserRouter>
+        <main>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/video-upload' element={<VideoUploadPage />} />
+                </Routes>
+            </BrowserRouter>
+        </main>
     );
 }
 
