@@ -2,8 +2,7 @@ import hero from '../../assets/Images/Upload-video-preview.jpg';
 import icon from '../../assets/Icons/upload.svg';
 
 import { useNavigate } from 'react-router-dom';
-
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function UploadVideo() {
@@ -18,7 +17,7 @@ function UploadVideo() {
         // const description = event.target.description.value;
 
         // if (!title || !description) {
-           
+
         //     alert("Video failed to upload, fileds are empty!");
         //     return;
         // }
@@ -41,15 +40,17 @@ function UploadVideo() {
                     <img className='main__image' src={hero} alt="hero image" />
                 </div>
 
-                <form >
+                <form onSubmit={addVideo}>
                     <label >TITLE YOUR VIDEO <input type="text" name="title" placeholder='Add a title to your video' /></label>
                     <label >ADD A VIDEO DESCRIPTION <input type="text" name="title" placeholder='Add a description to your video' /></label>
+
+                    <div>
+                        <button>PUBLISH</button>
+                        <img src={icon} alt="publish icon" />
+                    </div>
+
                 </form>
 
-                <div>
-                    <button onClick={addVideo} type="submit" >PUBLISH</button>
-                    <img src={icon} alt="publish icon" />
-                </div>
 
                 <div>
                     <Link to="/">CANCEL</Link>
@@ -59,7 +60,6 @@ function UploadVideo() {
         </>
 
     );
-
 }
 
 export default UploadVideo;
