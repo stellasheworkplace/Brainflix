@@ -44,6 +44,7 @@ function App() {
             <BrowserRouter>
                 < Routes>
                     <Route path='/' element={<Home />} />
+                    <Route path='/videos/:id' element={<Home />} />
                     <Route path='/video-upload' element={<VideoUploadPage />} />
 
                     <Route path='*' element={<PageNotFound />} />

@@ -12,15 +12,15 @@ function UploadVideo() {
     const addVideo = (event) => {
         event.preventDefault();
 
-        // const title = event.target.email.value;
-        // console.log(title);
-        // const description = event.target.description.value;
+        const title = event.target.title.value;
+        console.log(title);
+        const description = event.target.description.value;
 
-        // if (!title || !description) {
+        if (!title || !description) {
 
-        //     alert("Video failed to upload, fileds are empty!");
-        //     return;
-        // }
+            alert("Video failed to upload, fileds are empty!");
+            return;
+        }
 
         alert("Thanks for publishing your video!");
 
@@ -42,7 +42,7 @@ function UploadVideo() {
 
                 <form onSubmit={addVideo}>
                     <label >TITLE YOUR VIDEO <input type="text" name="title" placeholder='Add a title to your video' /></label>
-                    <label >ADD A VIDEO DESCRIPTION <input type="text" name="title" placeholder='Add a description to your video' /></label>
+                    <label >ADD A VIDEO DESCRIPTION <input type="text" name="description" placeholder='Add a description to your video' /></label>
 
                     <div>
                         <button>PUBLISH</button>
