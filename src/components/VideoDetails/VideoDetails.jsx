@@ -14,7 +14,6 @@ const{
 } = videoDescription;
 
     return (
-
         <section className='video'>
             <h3 className='video__title'> {title}</h3>
             <div className='video__info'>

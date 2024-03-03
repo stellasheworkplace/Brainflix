@@ -1,15 +1,14 @@
 import React from 'react';
 
-function VideoPlayListItem(props) {
-    let videoImage = props.videoSelected.image;
-    let videoPlayer = props.videoSelected.video;
-
+function VideoPlayListItem({videos}) {
+    console.log(videos);
+    const {image,video} = videos;
 
     return (
         <section>
             <div className="main">
-                <video width="100%" height="100%" poster={videoImage} controls>
-                    <source src={videoPlayer}  className="main__video" alt='Playing Video' />
+                <video width="100%" height="100%" poster={image} controls>
+                    <source src={video}  className="main__video" alt='Playing Video' />
                 </video>
             </div>
         </section>
