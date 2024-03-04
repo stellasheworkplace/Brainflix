@@ -29,7 +29,7 @@
 
         @include tablet{
             padding: 0;
-            //border-top: none;
+          
             height:30px;
         }
 
@@ -39,7 +39,6 @@
             font-size: 13px;
             font-weight: 700;
             line-height: 18px;
-            
         }
 
         &-date{
@@ -63,9 +62,12 @@
                 font-weight: 700;
                 line-height: 22px;
                 font-size: 14px;
+                margin-right: 1rem;
             }
 
-
+            @include desktop{
+                margin-right: 1rem;
+            }
         }
 
         &-right {
@@ -76,8 +78,14 @@
             @include tablet{
                 flex-direction: row;
                 padding: 16px 16px;
+                align-items: center;
             }
 
+            @include desktop{
+                align-items: center;
+                justify-content: space-between;
+
+            }
         }
 
         &-left {
