@@ -8,6 +8,14 @@
         @include desktop {
             display: flex;
             align-items: center;
+           margin-left: 5rem;
+           
+        }
+    }
+
+    &__comments{
+        @include desktop{
+            max-width:61rem;
            
         }
     }
@@ -17,6 +25,7 @@
 
             @include flex-row-center;
             flex-direction: column;
+            width:70%;
             
         }
     }

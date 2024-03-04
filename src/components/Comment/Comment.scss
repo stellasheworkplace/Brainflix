@@ -2,16 +2,6 @@
 @use '../../partials/color' as *;
 @use '../../partials/typography';
 
-// body {
-//     // font-family: "Avenir", sans-serif;
-//     // color: $primary-black;
-//     // padding: 16px 16px;
-
-//     // @include desktop {
-//     //     padding: 24px 48px;
-//     // }
-// }
-
 // form
 .comment {
 
@@ -79,9 +69,10 @@
 
     &__images {
         border-radius: 50%;
-        height: 40%;
-        width: 40%;
+        height: 50%;
+        width: 50%;
         object-fit: cover;
+        left:-1rem;
 
         @include tablet{
             margin-top: 1.7rem;
@@ -234,7 +225,7 @@ button:hover {
     &__container {
         @include flex-row-center;
         justify-content: space-between;
-        width: 24rem;
+        width: 100%;
 
         border: 1px solid $primary-silver;
         border-left: none;
@@ -243,7 +234,10 @@ button:hover {
 
         @include tablet {
             width: 100%;
-            
+        }
+
+        @include desktop{
+            width:88%;
         }
     }
 
@@ -258,7 +252,8 @@ button:hover {
         // overflow: hidden;
 
         position: relative;
-        top: -60px;
+        top: -80px;
+        left:-1rem;
 
         @include tablet {
             top: -25px;

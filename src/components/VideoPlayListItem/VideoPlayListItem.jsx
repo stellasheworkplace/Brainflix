@@ -1,4 +1,6 @@
 import React from 'react';
+import './VideoPlayListItem.scss';
+
 
 function VideoPlayListItem({videos}) {
     console.log(videos);
@@ -7,7 +9,7 @@ function VideoPlayListItem({videos}) {
     return (
         <section>
             <div className="main">
-                <video width="100%" height="100%" poster={image} controls>
+                <video className="main__box" width="100%" height="100%" poster={image} controls>
                     <source src={video}  className="main__video" alt='Playing Video' />
                 </video>
             </div>

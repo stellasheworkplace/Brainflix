@@ -34,7 +34,7 @@
         }
 
 
-        &--subtitle {
+        &-subtitle {
             color: $primary-silver;
             font-size: 13px;
             font-weight: 700;
@@ -42,7 +42,7 @@
             
         }
 
-        &--date{
+        &-date{
             padding-left:-16px;
 
             @include tablet{
@@ -54,8 +54,8 @@
             }
 
         }
-        &--channel {
-            @extend .video__info--subtitle;
+        &-channel {
+            @extend .video__info-subtitle;
             color: $primary-black;
             font-weight: 700;
 
@@ -68,7 +68,7 @@
 
         }
 
-        &--right {
+        &-right {
             @include flex-row-center;
             flex-direction: column;
             align-items: flex-start;
@@ -80,7 +80,7 @@
 
         }
 
-        &--left {
+        &-left {
             @include flex-row-center;
             flex-direction: column;
             align-items: flex-start;
@@ -92,7 +92,7 @@
 
         }
 
-        &--num{
+        &-num{
             position: relative;
             left: -45px;
             top: 3px;
@@ -103,8 +103,8 @@
 
         }
 
-        &--nums{
-            @extend .video__info--num;
+        &-nums{
+            @extend .video__info-num;
             top: 10px;
 
             @include tablet{
@@ -149,6 +149,4 @@
         }
 
     }
-
-
 }

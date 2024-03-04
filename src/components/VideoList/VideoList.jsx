@@ -9,8 +9,8 @@ function VideoList({ videos,videoSelected }) {
                 <ul className="video-list__nav">
                     {videos.filter((video) => video.id !== videoSelected.id).map((video) => {
                         return (
-                            <li key={video.id} className="video-list__nav--item">
-                                <Link to={`/videos/${video.id}`}>
+                            <li key={video.id} className="video-list__nav-item">
+                                <Link className='video-list__link' to={`/videos/${video.id}`}>
                                     <div>
                                         <img className="video-image" src={video.image} alt="image" />
                                     </div>

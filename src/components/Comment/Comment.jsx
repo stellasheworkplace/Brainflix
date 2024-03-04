@@ -42,7 +42,7 @@ function Comment({ videoSelected }) {
                                             <span className='comment__name'>{comment.name}</span>
                                             <span className='comment__date'>{new Date(comment.timestamp).toLocaleDateString('en-US')}</span>
                                         </div>
-                                        <p>
+                                        <p className='commennt__com'>
                                             {comment.comment}
                                         </p>
                                     </div>

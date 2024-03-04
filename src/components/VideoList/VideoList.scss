@@ -19,7 +19,7 @@
         width: 80%;
         padding: 0 5px 5px 16px;
         margin: 0;
-        &--item{
+        &-item{
             @include flex-row-center;
             height: 80px;
 
@@ -29,6 +29,12 @@
             }
        
         }
+    }
+
+    &__link{
+        @include flex-row-center;
+        justify-content: space-between;
+        text-decoration: none;
     }
 }
 
@@ -45,6 +51,7 @@
         font-weight: 700;
         width: 11rem;
         padding-left: 1rem;
+        color: $primary-black;
     }
 
     &__channel{

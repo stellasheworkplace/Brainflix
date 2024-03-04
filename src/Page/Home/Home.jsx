@@ -74,9 +74,12 @@ function Home() {
             <div className='app__bottom'>
                 <div className='app__box'>
                 <VideoDetails videoDescription={videoSelected} />
+
+                <div className='app__comments'>
                 <Comment comments={videoInfo} videoSelected={videoSelected} />
                 </div>
-
+            </div>
+              
                 <div className='app__list'>
                     <VideoList videos={videoInfo} videoSelected={videoSelected}/>
                 </div>
