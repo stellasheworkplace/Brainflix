@@ -13,6 +13,8 @@ function Home() {
     const [videoInfo, setVideoInfo] = useState([]);
     const [videoSelected, setActivedVideo] = useState({});
     
+    const baseUrl = process.env.REACT_APP_BASE_URL;
+
     const params = useParams();
 
     const [isLoadinng, setIsLoading] = useState(true);
@@ -20,10 +22,10 @@ function Home() {
 
     //fetch all video data
     useEffect(() => {
-        const API_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=861ebcf7-3b96-48cc-9e68-da2d9a961d28";
+        //const API_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=861ebcf7-3b96-48cc-9e68-da2d9a961d28";
         const fetchVideos = async () => {
             try {
-                const response = await axios.get(API_URL);
+                const response = await axios.get(`${baseUrl}/videos`);
                 
                 setIsLoading(false);
                 setVideoInfo(response.data);
@@ -38,18 +40,18 @@ function Home() {
 
     //fetch single video
     useEffect(() => {
-        const API_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=861ebcf7-3b96-48cc-9e68-da2d9a961d28";
-        const API_URLID = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${params.id}?api_key=861ebcf7-3b96-48cc-9e68-da2d9a961d28`;
+        //const API_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=861ebcf7-3b96-48cc-9e68-da2d9a961d28";
+        //const API_URLID = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${params.id}?api_key=861ebcf7-3b96-48cc-9e68-da2d9a961d28`;
         const fetchSingleVideo = async () => {
             try {
                 if (!params.id) {
-                    const response = await axios.get(API_URL);
-                    const selectedResponse = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${response.data[0].id}?api_key=861ebcf7-3b96-48cc-9e68-da2d9a961d28`);
+                    const response = await axios.get(`${baseUrl}/videos`);
+                    const selectedResponse = await axios.get(`${baseUrl}/videos/${response.data[0].id}`);
                     
                     setIsLoading(false);
                     setActivedVideo(selectedResponse.data);
                 } else {
-                    const selectedResponse = await axios.get(API_URLID);
+                    const selectedResponse = await axios.get(`${baseUrl}/videos/${params.id}`);
                     setActivedVideo(selectedResponse.data);
                 }
             } catch (error) {
