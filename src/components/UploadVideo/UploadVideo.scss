@@ -171,10 +171,11 @@ input::placeholder{
     width:21rem;
     height: 2.8rem;
     position: static;
+    
 
     @include tablet{
         width:14rem;
-        height:4rem;
+        height:2rem;
         position: relative;
         left:33rem;
         top:7rem;
@@ -182,6 +183,7 @@ input::placeholder{
         font-size: 12px;
         font-weight: 700;
         line-height: 20px;
+
     }
 
     @include desktop{
@@ -193,13 +195,14 @@ input::placeholder{
 }
 
 .icon{
-    position: absolute;
-    left:2rem;
-    top: 43.4rem;
+    position: relative;
+    top:-3.7rem;
+    left:-9rem;
 
     @include tablet{
+        position: absolute;
         left:34rem;
-        top: 57.7rem;
+        top: 56.1rem;
     }
 
     @include desktop{
@@ -209,17 +212,24 @@ input::placeholder{
 }
 
 .link{
-    padding: 48px;
+    padding-bottom: 48px;
     text-decoration: none;
     color:$primary-blue;
     font-weight: 700;
 
+    position: relative;
+    
+
     @include tablet{
-        position: relative;
-        left:-14rem;
+        position: absolute;
+        left:25rem;
+        top:56rem;
+       
     }
 
     @include desktop{
-        left: -16rem;
+        position: absolute;
+       left:64rem;
+       top:42rem;
     }
 }

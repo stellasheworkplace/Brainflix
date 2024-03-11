@@ -10,6 +10,9 @@
     padding: 0 16px;
     margin: 0;
 
+    @include tablet{
+        padding: 12px 24px;
+    }
     @include desktop {
         padding: 24px 48px;
     }
@@ -23,8 +26,11 @@
     &__upload {
         @include flex-row-center;
         height: 80%;
+        width: 100%;
 
-        
+       @include tablet{
+        width: 30rem;
+       }
         @include desktop {
             //justify-content: space-evenly;
             align-items: flex-start;
@@ -35,6 +41,7 @@
 
     &__left {
         align-items: flex-start;
+        width: 100%;
     }
 
     &__right {
@@ -113,8 +120,10 @@
         margin-top: 1rem;
 
         @include tablet {
-            left: 310px;
-            bottom: 30px;
+            position: absolute;
+            left: 53rem;
+            bottom:16.7rem;
+            
         }
         @include desktop{
             left:-35rem;
@@ -131,10 +140,13 @@
 
         border-radius: 5px;
         left: 10rem;
+       
 
         @include tablet {
-            width: 26rem;
+
+            width: 25rem;
             height: 3rem;
+            
         }
 
         @include desktop {
@@ -193,7 +205,7 @@ button {
     left:-12px;
 
     @include tablet {
-        min-width: 11rem;
+        min-width: 12rem;
         min-height: 3rem;
         position: absolute;
         left: -18rem;
@@ -288,8 +300,8 @@ button:hover {
 
     &__image {
         border-radius: 50%;
-        height: 50%;
-        width: 50%;
+        //height: 50%;
+        //width: 50%;
         object-fit: cover;
 
         @include tablet {

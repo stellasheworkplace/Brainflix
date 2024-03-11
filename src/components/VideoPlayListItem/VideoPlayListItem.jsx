@@ -7,7 +7,7 @@ function VideoPlayListItem({videos}) {
 
     return (
         <section>
-            <div className="main">
+            <div className="mains">
                 <video className="main__box" width="100%" height="100%" poster={`${baseUrl}/${videos}`} controls/>
             </div>
         </section>
