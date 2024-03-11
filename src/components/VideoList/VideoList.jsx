@@ -13,7 +13,7 @@ function VideoList({ videos,videoSelected }) {
                             <li key={video.id} className="video-list__nav-item">
                                 <Link className='video-list__link' to={`/videos/${video.id}`}>
                                     <div>
-                                        <img className="video-image" src={`${baseUrl}/images/${image}`} alt="image" />
+                                        <img className="video-image" src={`${baseUrl}/${video.image}`} alt="image" />
                                     </div>
 
                                     <div className='video-info'>

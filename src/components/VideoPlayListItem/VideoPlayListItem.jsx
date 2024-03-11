@@ -3,13 +3,12 @@ import './VideoPlayListItem.scss';
 
 
 function VideoPlayListItem({videos}) {
-    const {image} = videos;
     const baseUrl = process.env.REACT_APP_BASE_URL;
 
     return (
         <section>
             <div className="main">
-                <video className="main__box" width="100%" height="100%" poster={`${baseUrl}/images/${image}`} controls/>
+                <video className="main__box" width="100%" height="100%" poster={`${baseUrl}/images/${videos}`} controls/>
             </div>
         </section>
     )
