@@ -7,18 +7,18 @@
     align-items: center;
     padding: 16px 16px;
     width: 100%;
-    height: 12rem;
+    height: 11rem;
 
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
         padding: 0 24px;
-        height: 8rem;
+        height: 5rem;
     }
 
     @include desktop {
         padding: 0 80px;
-        height: 5rem;
+        height: 6rem;
 
     }
 
@@ -46,6 +46,7 @@
         @include tablet {
             width: 50%;
             padding: 24px 0;
+            
         }
 
         @include desktop {
@@ -60,34 +61,38 @@
         border: 1px solid #E1E1E1;
         border-radius: 4px;
         background-color: #fafafa;
-        position: absolute;
+        position: relative;
         padding-inline-start: 45px;
 
         @include tablet {
-            position: relative;
-            min-width: 60%;
-            min-height: 50px;
-            left: 4rem;
+            position: absolute;
+            min-width: 30%;
+            min-height: 48px;
+            left: 14rem;
         }
 
         @include desktop {
-            left: 13rem;
-            min-height: 50px;
-            min-width: 80%;
+            position: absolute;
+            left: 41rem;
+            min-height: 40px;
+            min-width: 20%;
         }
     }
 
     &__icon {
         position: relative;
         padding-left: 10px;
+        left:-20rem;
         
 
         @include tablet {
-            left: -11rem;
+            position: absolute;
+            left:15rem;
         }
 
         @include desktop {
-            left: -5rem;
+            position: absolute;
+            left: 41rem;
         }
     }
 
@@ -97,60 +102,70 @@
         width: 50px;
         height: 50px;
 
-        position: absolute;
-        left: 23rem;
+        position: relative;
+       
 
         @include tablet {
-            position: relative;
-            left: 55%;
+            position: absolute;
+            left: 90%;
         }
 
         @include desktop {
-            left: 30rem;
+            position: absolute;
+            left: 81rem;
         }
     }
 
 
 &__upload {
-    width: 90%;
-    height: 45px;
+    width: 100%;
+    height: 40px;
 
    
     background-color: $primary-blue;
     border: none;
     border-radius: 4px;
 
-    position: absolute;
+    position: relative;
     line-height: 20px;
     font-size: 15px;
     font-weight: 700;
     color: $primary-white;
-    left: 1rem;
-    top:8rem;
+    left:0.2rem;
+    top:-0.3rem;
    
-
+    
     @include tablet {
-        position: relative;
+        position: absolute;
 
         width: 12rem;
-        left: -5rem;
-        top:0.1rem;
+        left: 30rem;
+        top:1rem;
     }
 
     @include desktop {
-        left: -6rem;
-        width:3rem;
+        position: absolute;
+        left: 63rem;
+        top:1.6rem;
     }
 
     &-icon {
-        position: absolute;
-        left: 20px;
-        top: 9px;
+        position: relative;
+        left: -9rem;
+        
 
         @include tablet {
-            position: relative;
-            left: -40px;
+            position: absolute;
+            left:1rem;
         }
+
+        @include desktop {
+            position: absolute;
+            left:1rem;
+        }
+
+
+
     }
 }
 }
