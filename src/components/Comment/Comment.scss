@@ -7,7 +7,8 @@
 
     font-family: "Avenir", sans-serif;
     color: $primary-black;
-    padding: 16px 16px;
+    padding: 0 16px;
+    margin: 0;
 
     @include desktop {
         padding: 24px 48px;
@@ -72,7 +73,9 @@
         height: 50%;
         width: 50%;
         object-fit: cover;
-        left:-1rem;
+        left:0.5rem;
+        top:1.3rem;
+        position: relative;
 
         @include tablet{
             margin-top: 1.7rem;
@@ -107,6 +110,7 @@
 
     &__button {
         position: relative;
+        margin-top: 1rem;
 
         @include tablet {
             left: 310px;
@@ -140,19 +144,21 @@
     }
 
     &__logo {
-        position: absolute;
-        left: 30px;
-        top: 4px;
+        position: relative;
+        
+        top: -34px;
 
         @include tablet {
             top: 10px;
             left: -17rem;
+            position: absolute;
             
         }
 
         @include desktop {
             left: 7.7rem;
             top: 0.8rem;
+            
         }
     }
 }
@@ -178,7 +184,7 @@ button {
     align-items: flex-start;
     background-color: $primary-blue;
     border: none;
-    min-height: 2rem;
+    min-height: 3rem;
     min-width: 18rem;
     color: white;
     border-radius: 8px;
@@ -307,5 +313,11 @@ button:hover {
 
     &__date {
         color: $primary-silver;
+        position: relative;
+        left:2rem;
+    }
+
+    &__com{
+        width:100%;
     }
 }
