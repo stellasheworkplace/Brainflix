@@ -7,10 +7,11 @@
     color: $primary-black;
     &__title {
         padding: 24px 16px 16px 16px;
-        font-size: 24px;
+        font-size: 28px;
         line-height: 32px;
-        font-weight: 700;
+        font-weight: 900;
         margin: 0;
+
 
         @include tablet{
             font-family: "Avenir Bold", sans-serif;
@@ -23,8 +24,11 @@
         @include flex-row-center;
         justify-content: space-between;
        
-        padding: 16px 16px;
+        padding: 13px 16px;
         border-bottom:  1px solid $secondary-mercury;
+        border-top:  1px solid $secondary-mercury;
+        margin-left:1rem;
+        margin-right: 1rem ;
        
 
         @include tablet{
@@ -147,9 +151,10 @@
 
     &__description{
         padding: 16px 16px 24px 16px;
-        font-size: 13px;
-        line-height: 18px;
-        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        font-weight: 450;
+        margin:0;
 
         @include tablet{
             font-size: 14px;
